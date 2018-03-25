@@ -1,0 +1,23 @@
+Name:           Ki
+Version:        1.0
+Cabal-Version:  >= 1.2
+License:        MIT
+Author:         Liwei Cai <cai_lw@126.com>
+Synopsis:       Interpreter of the K language -- a tiny subset of Lisp
+Tested-With:    GHC == 8.0.1
+Build-Type:     Simple
+
+Executable ki
+    Main-Is:        ki.hs
+    Hs-Source-Dirs: src
+    Build-Depends:  base >= 4.9,
+                    attoparsec >= 0.13,
+                    text >= 1.2,
+                    mtl >= 2.2
+
+Test-Suite test-ki
+    Type:           exitcode-stdio-1.0
+    Main-Is:        test.hs
+    Hs-Source-Dirs: src, test
+    Build-Depends:  base >= 4.9,
+                    hspec >= 2.3
